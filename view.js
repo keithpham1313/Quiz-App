@@ -7,7 +7,7 @@ function updateView(){
 
         html += /*HTML*/`
             <h3>${quiz[i].question}</h3>
-            <p>${svarFun()}</p>
+            <p>${svarListe()}</p>
             <button onlick="answerBtn()"><b>Svar</b></p>
         `;
     };
@@ -19,12 +19,12 @@ updateView()
 
 
 //Liste opp alle svarene
-function svarFun(){
+function svarListe(){
     let html = ``;
 
-    for(let i = 0; i < quiz.length; i++){
+    for(let p = 0; p < quiz.length; p++){
         html += /*HTML*/`
-            <li>${quiz[i].svar}</li>
+            <li>${quiz[p].svar}</li>
         `;
     };
 }
