@@ -1,0 +1,4 @@
+//Svar-knapp
+function answerBtn(){
+
+}
