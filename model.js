@@ -17,7 +17,7 @@ let quiz = [
                 type: "correct",
             }, 
             {
-                altanswer: "En astroide"
+                altanswer: "En astroide",
                 type: "wrong",
             },    
         ],

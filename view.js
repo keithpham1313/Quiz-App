@@ -22,9 +22,9 @@ updateView()
 function svarFun(){
     let html = ``;
 
-    for(let i = 0; i < quiz.svar.length; i++){
+    for(let i = 0; i < quiz.length; i++){
         html += /*HTML*/`
-            <li>${quiz.svar[i].altanswer}</li>
+            <li>${quiz[i].svar}</li>
         `;
     };
 }
