@@ -7,8 +7,13 @@ function updateView(){
 
         html += /*HTML*/`
             <h3>${quiz[i].question}</h3>
-            <p>${svarListe()}</p>
-            <button onlick="answerBtn()"><b>Svar</b></p>
+            
+            <p>
+            <input type="checkbox">
+            ${svarListe()}
+            </p>
+            
+            <button onclick="answerBtn()"><b>Svar</b></p>
         `;
     };
 
@@ -19,12 +24,19 @@ updateView()
 
 
 //Liste opp alle svarene
-function svarListe(){
+function svarListe(indexAns){
     let html = ``;
 
-    for(let p = 0; p < quiz.length; p++){
+    for(let p = 0; p < indexAns.length; p++){
         html += /*HTML*/`
-            <li>${quiz[p].svar}</li>
+            <li>
+                <input
+                    type="radio"
+                >
+                
+                ${indexAns[p].altanswer}
+            </li>
         `;
     };
+    return html;
 }

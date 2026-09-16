@@ -1,9 +1,11 @@
 let appView = document.getElementById('app');
 
+let returnAnswer;
+
 let quiz = [
     {
         question: "Hva er sola?",
-        svar: [
+        answer: [
             {
                 altanswer: "En planet",
                 type: "wrong",
@@ -24,7 +26,7 @@ let quiz = [
     },
     {
         question: "Hvilken planet i solsystemet vårt er den varmeste?",
-        svar: [
+        answer: [
             "Merkur", 
             "Venus", 
             "Mars", 
@@ -33,7 +35,7 @@ let quiz = [
     },
     {
         question: "Hva heter den største planeten i solsystemet vårt?",
-        svar: [
+        answer: [
             "Saturn", 
             "Neptun", 
             "Uranus", 
@@ -42,7 +44,7 @@ let quiz = [
     },
     {
         question: "Hva bruker astronomer for å måle de enorme avstandene mellom stjerner og galakser?",
-        svar: [
+        answer: [
             "Lysår", 
             "Kilometer", 
             "Lydfart", 
@@ -51,7 +53,7 @@ let quiz = [
     },
     {
         question: "Hva heter galaksen som er nærmest vår galakse?",
-        svar: [
+        answer: [
             "Melkeveien", 
             "Orion", 
             "Andromeda", 
