@@ -3,40 +3,35 @@ function updateView(){
         <h2>Quiz-App</h2>
     `;
 
-    for(let i = 0; i < quiz.length; i++){
+    for(let i = 0; i < model.data.list.length; i++){
 
         html += /*HTML*/`
-            <h3>${quiz[i].question}</h3>
+            <h3>${model.data.list[i].question}</h3>
             
             <p>
             <input type="checkbox">
-            ${svarListe()}
+            ${svarListe(model.data.list[i].answers)}
             </p>
             
-            <button onclick="answerBtn()"><b>Svar</b></p>
+            <button onclick="answerBtn()"><b>Svar</b></button>
         `;
     };
-
-    appView.innerHTML = html;
+    model.app.innerHTML = html;
 }
 
 updateView()
 
 
-//Liste opp alle svarene
-function svarListe(indexAns){
-    let html = ``;
+function svarListe(answers){
+    let html = /*HTML*/``;
 
-    for(let p = 0; p < indexAns.length; p++){
+    for(let i = 0; i < answers.length; i++){
         html += /*HTML*/`
             <li>
-                <input
-                    type="radio"
-                >
-                
-                ${indexAns[p].altanswer}
+            <input type="radio">
+            ${answers[i].altAns}
             </li>
         `;
-    };
+    }
     return html;
 }
